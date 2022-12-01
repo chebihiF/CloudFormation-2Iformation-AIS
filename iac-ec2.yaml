@@ -1,3 +1,8 @@
+Parameters:
+  SecurityGroupServerPort:
+    Description: Server port
+    Type: Number
+
 Resources:
   # an EC2 instance
   MyInstance:
@@ -31,6 +36,6 @@ Resources:
           IpProtocol: tcp
           ToPort: 22
         - CidrIp: 0.0.0.0/0
-          FromPort: 80
+          FromPort: !Ref SecurityGroupServerPort
           IpProtocol: tcp
-          ToPort: 80
+          ToPort: !Ref SecurityGroupServerPort
