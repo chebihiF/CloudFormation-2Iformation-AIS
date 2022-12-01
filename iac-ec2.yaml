@@ -12,7 +12,7 @@ Resources:
 
   # our EC2 security groups
   SSHSecurityGroup:
-    Type: AWS:EC2:SecurityGroup
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable SSH access via port 22
       SecurityGroupIngress:
@@ -22,7 +22,7 @@ Resources:
           toPort: 22
   
   ServerSecurityGroup:
-    Type: AWS:EC2:SecurityGroup
+    Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable HTTP access via port 80
       SecurityGroupIngress:
